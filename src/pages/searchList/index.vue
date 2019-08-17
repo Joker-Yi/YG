@@ -79,7 +79,15 @@ export default {
         this.searchList.sort((a, b) => {
           return a.goods_price - b.goods_price
         })
+        //返回顶部
+        this.goTop();
       }
+    },
+    // 返回顶部
+    goTop(){
+      wx.pageScrollTo({
+        scrollTop: 0
+      })
     },
     // 接收分类页面传递过来的参数
     getSearchKey() {
